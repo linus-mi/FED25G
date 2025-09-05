@@ -1,0 +1,99 @@
+html {
+    font-family: sans-serif;
+}
+body {
+    margin: 0;
+    padding: 0;
+}
+
+div.container {
+    display: grid;
+    grid-template-columns: auto 200px;
+    grid-template-rows: 100px 60px auto 200px;
+    grid-template-areas: "header header"
+                         "main ."
+                         "main aside"
+                         "footer footer";
+    min-height: 100vh;
+    @media screen and (max-width: 767px) {
+        grid-template-columns: auto;
+        grid-template-rows: 100px auto auto 200px;
+        grid-template-areas: "header"
+                            "main"
+                            "aside"
+                            "footer";
+    }
+    @media screen and (min-width: 768px) {
+        max-width: 80%;
+        margin: auto;
+    }
+    @media screen and (min-width: 1200px) {
+        max-width: 70%;
+    }
+}
+
+header {
+    background-color: rgb(211, 237, 178);
+    grid-area: header;
+    /* grid-column-start: 1;
+    grid-column-end: 3; */
+    nav {
+        height: 100%;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        margin: auto;
+        a {
+            color: black;
+            text-transform: uppercase;
+            text-decoration: none;
+            font-weight: bold;
+            padding: 10px 12px;
+            
+        }
+        @media screen and (min-width: 1200px) {
+            max-width: 700px;
+            a.logo {
+                flex-grow: 1;
+            }
+        }
+    }
+}
+
+main {
+    padding: 20px;
+    grid-area: main;
+    /* grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 2;
+    grid-row-end: 4; */
+    h1 {
+    }
+}
+
+aside {
+    padding: 20px;
+    grid-area: aside;
+    /* grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 2;
+    grid-row-end: 3; */
+}
+
+footer {
+    grid-area: footer;
+    background-color: rgb(176, 19, 85);
+    color: white;
+    display: flex;
+    align-items: end;
+    justify-content: center;
+    padding: 20px;
+    p {
+        margin: 0;
+    }
+    /* grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 4;
+    grid-row-end: 5; */
+}

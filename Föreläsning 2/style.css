@@ -1,0 +1,113 @@
+html {
+    font-family: "Noto Serif", serif;
+    font-size: 18px;
+    line-height: 130%;
+}
+h1, h2, h3, h4, h5, h6 {
+  font-family: "DynaPuff", system-ui;
+  font-weight: 400;
+}
+
+img {
+    max-width: 100%;
+    width: 300px;
+    /* max-height: 100px; */
+    /* object-fit: cover; */
+    /* object-position: 100% 0%; */
+
+}
+
+figure {
+    float: right;
+    margin: 40px;
+    margin-right: 0;
+    margin-top: 0;
+    position: relative;
+}
+
+figcaption {
+    background-color: #fffc;
+    position: absolute;
+    bottom: 0px;
+    width: 100%;
+    padding: 30px;
+    box-sizing: border-box;
+}
+
+.decoration {
+    width: 300px;
+    height: 300px;
+    margin: auto;
+    display: flex;
+    align-items: end;
+    background-image: url(kristaps-ungurs-4orvBonHMGk-unsplash.jpg);
+    background-size: cover;
+    background-position: bottom;
+    clear: both;
+}
+
+.textbox {
+    width: 100%;
+    padding: 10px 20px;
+    background-color: #fffc;
+}
+
+/* nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    height: 200px;
+    align-items:center;
+    gap: 10px;
+}
+
+nav a {
+    border: 1px solid red;
+    text-decoration: none;
+}
+
+a.logo {
+    flex-grow: 1;
+} */
+
+
+
+/* The navbar container */
+nav {
+  overflow: hidden;
+  background-color: #333;
+}
+
+/* Navbar links */
+nav a {
+    float: left;
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    @media screen and (max-width: 600px) {
+        float: none;
+        width: 100%;
+    }
+    @media screen and (min-width: 601px) {
+        color: lightgreen;
+    }
+    @media screen and (min-width: 768px) {
+        color: lightskyblue;
+    }
+    @media screen and (min-width: 992px) {
+        color: red;
+    }
+    @media screen and (min-width: 1200px) {
+        color: yellow;
+    }
+}
+
+/* On screens that are 600px wide or less, make the menu links stack on top of each other instead of next to each other */
+/* @media screen and (max-width: 600px) {
+  nav a {
+    float: none;
+    width: 100%;
+  }
+} */
