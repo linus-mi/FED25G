@@ -1,0 +1,121 @@
+body {
+    margin: 0;
+}
+
+.grid-container {
+    height: 100vh;
+    display: grid;
+    grid-template-columns: auto 200px;
+    grid-template-rows: 100px 50px auto auto 150px;
+    grid-template-areas: 
+            "header header"
+            "submenu submenu"
+            "main aside"
+            ". ."
+            "footer footer";
+
+    @media screen and (max-width: 599px){   
+        .grid-container {
+            grid-template-columns: auto;
+            grid-template-areas:
+                    "header"
+                    "submenu"
+                    "main"
+                    "aside"
+                    "footer";
+        }
+    }
+
+    @media screen and (min-width: 600px){
+        
+    }
+
+}
+
+nav {
+    /* grid-area: header; */
+    grid-column: 1 / span 2;
+    /* grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 2; */
+    background-color: bisque;
+    padding: 20px;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    gap: 20px;
+
+    a {
+        text-transform: uppercase;
+        text-decoration: none;
+        font-size: 1.5rem;
+        color: black;
+        font-family: sans-serif;
+        font-weight: bold;
+    }
+}
+
+.submenu {
+    grid-area: submenu;
+}
+main {
+    grid-area: main;
+    /* grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 2;
+    grid-row-end: 3; */
+    margin: 50px;
+}
+
+aside{
+    grid-area: aside;
+    /* grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 2;
+    grid-row-end: 3; */
+}
+
+footer {
+    grid-area: footer;
+    /* grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 3;
+    grid-row-end: 4; */
+    background-color: darkblue;
+    color: white;
+    padding: 20px;
+}
+
+@media screen and (max-width: 599px){
+    body {
+        background-color:crimson;
+    }
+
+    aside {
+        padding: 50px;
+    }
+    nav {
+        flex-direction: column;
+    }
+}
+@media screen and (min-width: 600px){
+    body {
+        background-color:coral;
+    }
+}
+@media screen and (min-width: 768px){
+    body {
+        background-color:aqua;
+    }
+}
+@media screen and (min-width: 992px){
+    body {
+        background-color:hotpink;
+    }
+}
+@media screen and (min-width: 1200px){
+    body {
+        background-color:mediumspringgreen;
+    }
+}
