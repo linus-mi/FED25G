@@ -1,0 +1,65 @@
+html {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 24px;
+}
+
+body {
+    /* margin: 100px; */
+    /* margin-left:150px; */
+}
+
+nav {
+    text-align: center;
+}
+
+main {
+    color:orangered;
+}
+
+a {
+    color:orangered;
+    font-size: 2rem;
+    padding: 0 20px;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+a:visited {
+    color: orangered;
+}
+
+p {
+    width: 50%;
+    margin:50px 20px;
+    padding: 20px;
+    border: 1px solid violet;
+    box-sizing: border-box;
+}
+
+.lorem {
+    font-size: 1rem;
+}
+
+.smaller-text {
+    font-size:0.5em;
+}
+
+ul {
+    text-align: center;
+    list-style-position: inside;
+}
+
+li:first-child {
+    margin-left:10px;
+}
+
+li:last-child {
+    font-weight: bold;
+}
+
+li:nth-child(2n) {
+    background-color: #ccc;
+    margin-left: 15px;
+}
