@@ -1,0 +1,25 @@
+:root {
+    --radius: 50px;
+    --lg-radius: calc(var(--radius) * 10);
+}
+
+.rounded {
+    border-radius: var(--radius);
+}
+
+.large-round {
+    border-radius: var(--lg-radius) ;
+}
+
+section.long {
+    height: 400vh;
+
+    p {
+        border: 5px solid red;
+    }
+}
+
+/* 
+section.long * {
+    border: 5px solid red;
+} */
