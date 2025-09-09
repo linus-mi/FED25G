@@ -19,6 +19,10 @@ section.long {
     }
 }
 
+.test-class {
+    background-color: teal;
+}
+
 /* 
 section.long * {
     border: 5px solid red;
