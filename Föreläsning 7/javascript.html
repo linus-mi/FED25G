@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+.original {
+    background-color: aquamarine;
+    height: 100px;
+    width: 100px;
+}
+    </style>
+</head>
+<body>
+    <h1>JS</h1>
+    <p id="text" class="original">Hej hej</p>
+    <button onclick="helloWorld()">Klicka här</button>
+    <script>
+
+console.log('Sidan visas');
+
+function helloWorld() {
+    console.log('Funktionen körs')
+    // window.alert('Hello World');
+    
+    let variableName = 'text';
+    const paragraph = document.getElementById(variableName)
+
+    paragraph.innerText = 'Ny text via kod!';
+    paragraph.classList.toggle('original');
+}
+
+// helloWorld();
+
+    </script>
+</body>
+</html>
