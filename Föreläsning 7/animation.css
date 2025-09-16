@@ -1,0 +1,40 @@
+html {
+    font-family: sans-serif;
+}
+
+@keyframes box-animation {
+    0% {width: 300px; color: white}
+    50% {
+        width: 500px;
+        height: 250px;
+        color: blue;
+    }
+    100% {
+        width: 400px;
+        color: red;
+    }
+}
+
+.box {
+    font-size: 4rem;
+    font-weight: bold;
+    width: 200px;
+    height: 200px;
+    background-color: aquamarine;
+    color:darkblue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* animation-name: box-animation;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out; */
+    /* animation-delay: 1s; */
+    /* animation-fill-mode: both; */
+    /* animation-direction: reverse; */
+    animation: box-animation 2s infinite ease-in-out both;
+}
+
+.box:hover {
+    animation-play-state: paused;
+}
