@@ -1,0 +1,3 @@
+@mixin mobile-only {
+    @media (max-width: 599px) { @content; }
+}

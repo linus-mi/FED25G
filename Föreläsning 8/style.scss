@@ -1,0 +1,66 @@
+@use 'mediaqueries';
+
+@mixin flex-center {
+    display: flex;
+    align-items: center;
+}
+
+@mixin borderBelow($size, $color) {
+    border-bottom: $size solid $color;
+}
+
+$darkBlue: #336699;
+$thickRedBorder: 5px solid red;
+
+html {
+    font-family: sans-serif;
+}
+
+body {
+    background-color: cadetblue;
+    margin: 0;
+
+    @include mediaqueries.mobile-only {
+        background-color: lightcoral;
+    }
+}
+
+header {
+    @include borderBelow(10px, lightblue)
+}
+
+nav {
+    width: 100%;
+    background-color: white;
+    color: $darkBlue;
+    height: 100px;
+    margin: 0;
+    @include flex-center;
+    @include mediaqueries.mobile-only {
+        background-color: lightblue;
+    }
+
+    ul {
+        font-size: 1.8rem;
+        display: flex;
+        gap: 1rem;
+        text-transform: uppercase;
+        font-weight: bold;
+        margin: 0;
+        @include mediaqueries.mobile-only {
+            font-size: 1rem;
+        }
+
+        li {
+            list-style: none;
+
+            &:hover {
+            color: black;
+        }
+        }
+    }
+}
+
+.step-list {
+   @include flex-center; 
+}
