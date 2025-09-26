@@ -9,13 +9,21 @@
     background-color: aquamarine;
     height: 100px;
     width: 100px;
+    /* display: none; */
+}
+.active {
+    background-color: orange;
+    display: block;
 }
     </style>
 </head>
 <body>
     <h1>JS</h1>
+    <button id="first-button" onclick="helloWorld()">Klicka här</button>
+    <button id="second-button" onmouseover="helloWorld()" onmouseout="helloWorld()">Peka här</button>
+    <button id="third-button" onclick="createNewDiv()">Skapa innehåll</button>
+    <button id="fourth-button" onclick="simpleAnimation()">Animera</button>
     <p id="text" class="original">Hej hej</p>
-    <button onclick="helloWorld()">Klicka här</button>
     <script>
 
 console.log('Sidan visas');
@@ -26,9 +34,29 @@ function helloWorld() {
     
     let variableName = 'text';
     const paragraph = document.getElementById(variableName)
-
+    
     paragraph.innerText = 'Ny text via kod!';
-    paragraph.classList.toggle('original');
+    paragraph.classList.toggle('active');
+}
+
+function simpleAnimation() {
+    const paragraph = document.getElementById('text')
+    for (let i = 0; i < 100; i++) {
+        setTimeout(() => {
+            console.log(i*2)
+            paragraph.style.width = i*2 + 'px'
+        }, i*10)
+    }
+}
+
+function createNewDiv() {
+    const newElement = document.createElement('div');
+    const newContent = document.createTextNode("Hej svejs!");
+
+    newElement.appendChild(newContent)
+
+    const button = document.getElementById('first-button')
+    document.body.insertBefore(newElement, button);
 }
 
 // helloWorld();
