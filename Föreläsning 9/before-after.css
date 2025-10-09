@@ -1,0 +1,69 @@
+html {
+    font-size: 20px;
+    font-family: sans-serif;
+}
+body {
+    margin: 2rem;
+}
+
+main {
+    max-width: 500px;
+    margin: auto;
+}
+
+p.simple::before, p.simple::after {
+    content: '"';
+}
+
+p.image::before {
+    /* content: url('wiki.png'); */
+    
+    content: "";
+    background-image: url('wiki.png');
+    background-size: 1rem 1rem;
+    width: 1rem;
+    height: 1rem;
+    display: inline-block;
+    margin-right: 0.25rem;
+}
+
+p.citat {
+    position: relative;
+
+    &::before {
+        content: '\201D';
+        position: absolute;
+        top:-60px;
+        left: -70px;
+        font-size: 12rem;
+        font-family: Georgia;
+        color:pink;
+        z-index: -1;
+    }
+}
+p.dekor {
+    position: relative;
+
+    &::before {
+        content: "";
+        position: absolute;
+        top:0px;
+        left: -70px;
+        background-color:crimson;
+        width: 50px;
+        height: 50px;
+        transform: rotate(45deg);
+    }
+}
+
+.info {
+    background-color: rgb(238, 187, 187);
+    
+    &::before {
+        content: "info";
+        font-family: "Material Symbols Outlined";
+        color: red;
+        font-size: 1.25rem;
+        margin-right: 0.25rem;
+    }
+}
